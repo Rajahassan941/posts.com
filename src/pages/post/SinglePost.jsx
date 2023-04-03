@@ -24,8 +24,8 @@ function SinglePost() {
                     <Container>
                     <Card className='mt-4 text-center' style={{ width: '100%' }}>
                         <Card.Body>
-                            <Card.Title>{PostData.title}</Card.Title>
-                            <Card.Text>
+                            <Card.Title className='display-4 fw-bold mb-3 card-title'>{PostData.title}</Card.Title>
+                            <Card.Text className='card-text lead fs-2 '>
                                 {PostData.body}
                                 
                             </Card.Text>
