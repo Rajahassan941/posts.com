@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import { useSelector } from 'react-redux'
@@ -7,11 +7,12 @@ import { Row,Col,Spinner,Container,Card } from 'react-bootstrap'
 
 
 function SinglePost() {
-
     const result = useSelector(state => state.PostReducer)
     const { PostList } = result
     const params = useParams()
     const PostData=PostList.find(item=>item.id==params.id)
+   
+    
   return (
     <div>
     <Header/>
@@ -41,9 +42,10 @@ function SinglePost() {
             ) : <Spinner />
             }
         </>
-
-    <Footer/>
+    
+    <Footer />
     </div>
+   
   )
 }
 
